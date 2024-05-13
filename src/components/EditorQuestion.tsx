@@ -11,7 +11,6 @@ const quillModules = {
         [{list: 'ordered'}, {list: 'bullet'}],
         ['link', 'image'],
         [{align: []}],
-        [{color: []}],
         ['code-block'],
         ['clean'],
         [{ 'color': ['black', '#345679', 'red', 'yellow'] }], // Add more colors as needed
@@ -96,7 +95,7 @@ const EditorQuestion: React.FC<EditorQuestionProps> = ({ onDataChange }) => {
                             onChange={handleIntroductionChange}
                             modules={quillModules}
                             formats={quillFormats}
-                            className="w-full h-[70%] mt-10 bg-white"
+                            className="w-full h-[70%] mt-10 bg-white text-black"
                         />
                     </div>
                 </div>
@@ -122,7 +121,7 @@ const EditorQuestion: React.FC<EditorQuestionProps> = ({ onDataChange }) => {
                             onChange={handleDescriptionChange}
                             modules={quillModules}
                             formats={quillFormats}
-                            className="w-full h-[70%] mt-10 bg-white"
+                            className="w-full h-[70%] mt-10 bg-white text-black"
                         />
                     </div>
                 </div>
@@ -144,7 +143,7 @@ const EditorQuestion: React.FC<EditorQuestionProps> = ({ onDataChange }) => {
                             onChange={handleCodeBlockChange}
                             modules={quillModules}
                             formats={quillFormats}
-                            className="w-full h-[70%] mt-10 bg-white"
+                            className="w-full h-[70%] mt-10 bg-white text-black"
                         />
                     </div>
                 </div>
