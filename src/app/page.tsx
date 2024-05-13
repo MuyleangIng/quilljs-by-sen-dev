@@ -1,15 +1,16 @@
 'use client';
 import type { NextPage } from 'next';
 import EditorQuestion from '../components/EditorQuestion';
-import dynamic from 'next/dynamic';
-import 'react-quill/dist/quill.snow.css'; // Import Quill styles
+import 'react-quill/dist/quill.snow.css'; 
 import { useState } from 'react';
 
-const QuillEditor = dynamic(() => import('react-quill'), { ssr: false });
-
+interface EditorData {
+  introduction: string;
+  description: string;
+  codeBlock: string;
+}
 const Home: NextPage = () => {
   const [editorData, setEditorData] = useState<EditorData>({ introduction: "", description: "", codeBlock: "" });
-
   const handleEditorDataChange = (data: EditorData) => {
     setEditorData(data);
   };

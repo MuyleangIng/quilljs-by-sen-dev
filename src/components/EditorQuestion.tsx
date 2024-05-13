@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
-import 'react-quill/dist/quill.snow.css'; // Import Quill styles
+import 'react-quill/dist/quill.snow.css'; 
 
 const QuillEditor = dynamic(() => import('react-quill'), { ssr: false });
 const quillModules = {
@@ -13,7 +13,6 @@ const quillModules = {
         [{align: []}],
         ['code-block'],
         ['clean'],
-        [{ 'color': ['black', '#345679', 'red', 'yellow'] }], // Add more colors as needed
 
     ],
 };
@@ -81,8 +80,7 @@ const EditorQuestion: React.FC<EditorQuestionProps> = ({ onDataChange }) => {
                         Introduction
                     </h1>
                     <span className="text-gray-600 ">
-                    "Introduce the problem and add to what you put in the title.
-                    At least 20 characters"
+                    Test 1 
                   </span>
                     <div className={"pl-5"}>
                         {errorMessage && <p className="text-red-500">{errorMessage}</p>}
@@ -107,8 +105,7 @@ const EditorQuestion: React.FC<EditorQuestionProps> = ({ onDataChange }) => {
                         Description
                     </h1>
                     <span className="text-gray-600 ">
-                    "Describe what you tried, what you expected to happen, At
-                    least 20 characters"
+                    Test 2
                   </span>
                 </div>
                 <div className={"pl-5"}>
@@ -129,7 +126,7 @@ const EditorQuestion: React.FC<EditorQuestionProps> = ({ onDataChange }) => {
             <div>
                 <div className="pl-5 py-3">
                     <h1 className="font-semibold text-20 text-baseColor pb-4 ">
-                        Block of code
+                        Test 3
                     </h1>
 
                 </div>
@@ -163,15 +160,12 @@ const EditorQuestion: React.FC<EditorQuestionProps> = ({ onDataChange }) => {
 
 export default EditorQuestion;
 
-
-// Define an interface for the data structure
 interface EditorData {
     introduction: string;
     description: string;
     codeBlock: string;
   }
   
-  // Define props type for the EditorQuestion component
   interface EditorQuestionProps {
     onDataChange: (data: EditorData) => void;
   }
